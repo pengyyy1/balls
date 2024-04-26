@@ -125,21 +125,18 @@ function mousePressed() {
       var distance = dist(mouseX, mouseY, ball.position.x, ball.position.y);
       if (distance <= ball.radius) {
         ballBeingDragged = ball;
-        ball.dragging
-        ballBeingDragged = true;
-  ball.dragging = true;
-  mouseOffset = createVector(ball.position.x - mouseX, ball.position.y - mouseY);
-  break;
-}
+        ball.dragging = true;
+        mouseOffset = createVector(ball.position.x - mouseX, ball.position.y - mouseY);
+        break;
+      }
     }
-}
-
-if (!ballBeingDragged) {
-  var ball = new Ball(mouseX, mouseY, 20);
-  var randomVelocity = createVector(random(-maxSpeed, maxSpeed), random(-maxSpeed, maxSpeed));
-  ball.velocity = randomVelocity;
-  balls.push(ball);
-}
+  }
+  if (!ballBeingDragged) {
+    var ball = new Ball(mouseX, mouseY, 20);
+    var randomVelocity = createVector(random(-maxSpeed, maxSpeed), random(-maxSpeed, maxSpeed));
+    ball.velocity = randomVelocity;
+    balls.push(ball);
+  }
 }
 
 function mouseReleased() {
