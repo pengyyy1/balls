@@ -1,7 +1,7 @@
 var balls = [];
 var ballBeingDragged = null;
 var mouseOffset;
-var speedScale = 1;
+var speedScale = 1.1;
 var maxSpeed = 10;
 
 function Ball(x, y, radius) {
