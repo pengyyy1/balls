@@ -2,7 +2,7 @@ var balls = [];
 var ballBeingDragged = null;
 var mouseOffset;
 var speedScale = 1.1;
-var maxSpeed = 10;
+var maxSpeed = 50;
 
 function Ball(x, y, radius) {
   this.position = createVector(x, y);
