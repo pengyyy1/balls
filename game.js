@@ -75,7 +75,7 @@ function setup() {
   for (var i = 0; i < 10; i++) {
     var x = random(width);
     var y = random(height);
-    var radius = 20;
+    var radius = 50;
     var vx = random(-maxSpeed, maxSpeed);
     var vy = random(-maxSpeed, maxSpeed);
     var ball = new Ball(x, y, radius);
@@ -132,7 +132,7 @@ function mousePressed() {
     }
   }
   if (!ballBeingDragged) {
-    var ball = new Ball(mouseX, mouseY, 20);
+    var ball = new Ball(mouseX, mouseY, 50);
     var randomVelocity = createVector(random(-maxSpeed, maxSpeed), random(-maxSpeed, maxSpeed));
     ball.velocity = randomVelocity;
     balls.push(ball);
